@@ -6,9 +6,9 @@ class GetCarsByColorCaseImp implements GetCarsByColorUseCase {
   CarEntity call(String color) {
     if (color.contains("red")) {
       return CarEntity(
-          licensePlate: "QWE123", doorsNumber: 4, price: 4000.00, color: color);
+          licensePlate: "QWE123", doorNumber: 4, price: 4000.00, color: "red");
     }
     return CarEntity(
-        licensePlate: "ABC123", doorsNumber: 4, price: 2000.00, color: "blue");
+        licensePlate: "ABC123", doorNumber: 4, price: 2000.00, color: "blue");
   }
 }
