@@ -18,8 +18,11 @@ class GetCarsByLicensePlateRepositoryImp
 }
 
 void main() {
-  GetCarByLicensePlateRepository? repository;
+  GetCarByLicensePlateRepository repository =
+      GetCarsByLicensePlateRepositoryImp();
   test("Must return a entity car instance", () {
-    var result = repository!("ABC123");
+    var result = repository("ABC123");
+
+    expect(result, isInstanceOf<CarEntity>());
   });
 }
