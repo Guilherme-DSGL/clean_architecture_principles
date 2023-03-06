@@ -15,14 +15,14 @@ class CarController {
   );
 
   getCarByByColor(String color) {
-    return _getCarsByColor(color);
+    var car = _getCarsByColor(color);
   }
 
   getCarByLicensePlate(String licensePlate) {
-    return _getCarByLicensePlate(licensePlate);
+    var car = _getCarByLicensePlate(licensePlate);
   }
 
   saveFavoriteCar(CarEntity car) {
-    return _saveFavoriteCar(car);
+    var result = _saveFavoriteCar(car);
   }
 }
