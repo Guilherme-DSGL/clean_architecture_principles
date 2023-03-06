@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 import '../../data/datasources/local/get_car_by_color_local_datasource_imp.dart';
 import '../../data/datasources/local/get_cars_by_license_plate_datasource_imp.dart';
@@ -38,6 +38,11 @@ class _CarPageState extends State<CarPage> {
   );
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Container(
+        padding: EdgeInsets.all(24),
+        child: Text(_controller.car.licensePlate),
+      ),
+    );
   }
 }

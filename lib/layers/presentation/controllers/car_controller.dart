@@ -12,14 +12,18 @@ class CarController {
     this._getCarByLicensePlate,
     this._getCarsByColor,
     this._saveFavoriteCar,
-  );
+  ) {
+    getCarByByColor("red");
+  }
+
+  late CarEntity car;
 
   getCarByByColor(String color) {
-    var car = _getCarsByColor(color);
+    car = _getCarsByColor(color);
   }
 
   getCarByLicensePlate(String licensePlate) {
-    var car = _getCarByLicensePlate(licensePlate);
+    car = _getCarByLicensePlate(licensePlate);
   }
 
   saveFavoriteCar(CarEntity car) {
