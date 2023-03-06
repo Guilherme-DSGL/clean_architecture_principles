@@ -20,7 +20,7 @@ import '../../layers/domain/usecases/get_cars_by_license_plate/get_cars_by_licen
 import '../../layers/domain/usecases/save_car_favorite/save_favorite_car_usecase.dart';
 import '../../layers/domain/usecases/save_car_favorite/save_favorite_car_usecase_imp.dart';
 
-class Init {
+class Inject {
   static void init() {
     GetIt getIt = GetIt.instance;
 
