@@ -1,3 +1,4 @@
+import 'package:clean_architecture_principles/layers/presentation/controllers/car_controller.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../layers/data/datasources/get_car_by_color_datasource.dart';
@@ -46,5 +47,10 @@ class Init {
         () => GetCarsByColorUseCaseImp(getIt()));
     getIt.registerLazySingleton<SaveFavoriteCarUseCase>(
         () => SaveFavoriteCarUseCaseImp(getIt()));
+
+    //controllers
+
+    getIt.registerFactory<CarController>(
+        () => CarController(getIt(), getIt(), getIt()));
   }
 }
